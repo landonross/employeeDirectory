@@ -23,25 +23,7 @@ footer {
   width: 18rem;
 }
 
-#buttons {
-  margin-left: 30px;
+#searchBar {
   position: relative;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-150%, 10%);
-}
-
-#searchBox {
-  position: relative; 
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, 0%);
-}
-
-.title {
-  text-align: center;
-}
-
-.title2 {
-  text-align: center;
+  right: 0;
 }
