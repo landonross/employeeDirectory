@@ -6,12 +6,14 @@ import Navigation from './Navigation.js';
 
 class MainContent extends Component {
     state = {
+      // stores the specific information we are needing for the database into their respective categories
         search: "",
         employees: [],
         error: ""
     };
 
     componentDidMount() {
+      // Calls the random user database API and pulls the requested information from the data for the page
         API.search()
             .then(res => {
                 console.log(res)
@@ -48,7 +50,7 @@ class MainContent extends Component {
         });
         console.log('Handle ', this.state.search);
       };
-    
+    //search function that will be called back later upon the onclick of the submit button
       handleFormSubmit = (e) => {
         e.preventDefault();
         console.log('Button Clicked', this.state.search, e);
@@ -80,6 +82,7 @@ class MainContent extends Component {
                 </thead>
                 {[...this.state.employees].map((item) => (
                   <EmployeeCard
+                  //All the information that we need stored into variables that will be based into the employee card where they will be called later to organize the data accordingly
                     picture={item.picture}
                     firstName={item.firstName}
                     lastName={item.lastName}
